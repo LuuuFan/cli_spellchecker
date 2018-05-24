@@ -11,4 +11,5 @@ Or you can exec the program without the word argument:
 `$ ./spellchecker.rb`
 
 then input your word or sentence below the hint:
-``
+
+`"Please input a word"`
