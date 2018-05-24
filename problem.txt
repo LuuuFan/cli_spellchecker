@@ -1,0 +1,12 @@
+CLI spellchecker:
+
+(note:  most unix systems have a file called words somewhere in /usr/share that has a bunch of words, one per line)
+Implement a program that can be called from the cli like so:
+
+$ ./spellcheck effortles
+effortless
+
+It should print out words that the the person typing the misspelled word might have meant.
+
+
+words file path: /usr/share/dict
