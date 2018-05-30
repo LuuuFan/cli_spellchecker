@@ -62,6 +62,4 @@ class TrieTest < Test::Unit::TestCase
 		assert(res.length.eql?(5), "Expected return all the words in trie, it was #{res}")
 	end
 
-	
-
 end
