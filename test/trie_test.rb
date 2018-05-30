@@ -43,18 +43,20 @@ class TrieTest < Test::Unit::TestCase
 	end
 
 	def test_find_possible_words_false
-		res = @dictionary.find_possible_words('sa')
-		assert(res.length.eql?(0), "Expected there is no possible word for 'sa', but got #{res}")
+		res = @dictionary.find_prefix('quality')
+		assert(res.length.eql?(0), "Expected there is no prefix for 'quality', it was #{res}")
 	end
 
 	def test_find_prefix_has_prefix
 		res = @dictionary.find_prefix('capital')
 		assert(res.eql?('ca'), "Expected that prefix for capital is 'ca', it was #{res}")
+		res = @dictionary.find_prefix('sa')
+		assert(res.eql?('s'), "Expected that prefix for 'sa' is 's', but got #{res}")
 	end
 
 	def test_find_prefix_has_no_prefix
-		res = @dictionary.find_prefix('shasha')
-		assert(res.eql?(""), "Expected there is no prefix for 'shasha, it was #{res}")
+		res = @dictionary.find_prefix('quality')
+		assert(res.eql?(""), "Expected there is no prefix for 'quality, it was #{res}")
 	end
 
 	def test_print_trie
