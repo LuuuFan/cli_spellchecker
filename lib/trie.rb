@@ -82,6 +82,10 @@ class Trie
         current_node.end_of_word ? [prefix].concat(get_sub_word(current_node, prefix)) : get_sub_word(current_node, prefix)
     end
 
+    def print_trie
+        get_sub_word(@root, "")
+    end
+
     # function for finding valid prefix if word has been mis spelled
     def find_prefix(word)
         prefix = ''
@@ -93,6 +97,7 @@ class Trie
         prefix.slice(0, prefix.length - 1)
     end
 
+    private
     # function for find sub words for the one node
     def get_sub_word(node, prefix)
         return [] if !starts_with(prefix)

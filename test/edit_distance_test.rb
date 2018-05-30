@@ -1,5 +1,5 @@
 require 'test/unit'
-require_relative 'edit_distance'
+require_relative '../lib/edit_distance'
 
 class EditDistanceTest < Test::Unit::TestCase
 	
@@ -10,7 +10,6 @@ class EditDistanceTest < Test::Unit::TestCase
 
 	def correct_modified_steps
 		res = edit_distance('cat', 'cake')
-		p res
 		assert(res.eql?(2), "Expected 2 but was #{res}")
 	end
 
